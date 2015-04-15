@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+	<script type='text/javascript' src='Spritesheet.js'></script>
+	<script type='text/javascript' src='Horse.js'></script>
+</head>
+
+<body>
+	<canvas id="horseCanvas" width="183px" height="134px"></canvas>
+
+	<script type="text/javascript">
+
+
+	var horse = new Horse('sprite-horse_732x536.gif', 183, 134, 5, 16);
+	horse.start();
+
+	</script>
+
+	<button onclick="horse.decreaseSpeed()">Decrease speed</button>
+	<button onclick="horse.increaseSpeed()">Increase speed</button>
+</body>
+
+</html>
