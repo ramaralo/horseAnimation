@@ -54,7 +54,7 @@ function SpriteSheet() {
     frameDelay++;
   };
 
-  this.initSpritesheet = function (imgPath, frmWidth, frmHeight, frmDelay, endFrm) {
+  this.initSpritesheet = function (imgPath, frmWidth, frmHeight, frmDelay, endFrm, canvasId) {
 
     console.log(arguments);
 
@@ -64,7 +64,7 @@ function SpriteSheet() {
     frameDelay = frmDelay;
     endFrame = endFrm;
 
-    ctx = document.getElementById('horseCanvas').getContext('2d')
+    ctx = document.getElementById(canvasId).getContext('2d');
     image = new Image();
     image.src = path;
     image.onload = function (){

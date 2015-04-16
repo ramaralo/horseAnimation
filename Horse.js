@@ -1,20 +1,7 @@
-window.requestAnimFrame = (function(){
-		  return  window.requestAnimationFrame       ||
-		          window.webkitRequestAnimationFrame ||
-		          window.mozRequestAnimationFrame    ||
-		          window.oRequestAnimationFrame      ||
-		          window.msRequestAnimationFrame     ||
-		          function(callback, element){
-		            window.setTimeout(callback, 1000 / 60);
-		          };
-		})();
-
-
-
-function Horse(path, frameWidth, frameHeight, frameDelay, endFrame) {
+function Horse(path, frameWidth, frameHeight, frameDelay, endFrame, canvasId) {
 	var myObj = this;
 	
-	myObj.initSpritesheet(path, frameWidth, frameHeight, frameDelay, endFrame);
+	myObj.initSpritesheet(path, frameWidth, frameHeight, frameDelay, endFrame, canvasId);
 }
 
 Horse.prototype = new SpriteSheet();
